@@ -34,11 +34,17 @@ npm run dev
 
 3. Abre <http://localhost:5173>.
 
-Si la API corre en otra computadora, crea un archivo `.env` con:
+Si la API corre en otra computadora:
 
-```
-VITE_API_URL=http://192.168.1.10:8000/graphql
-```
+1. En esa PC arranca la API con `uvicorn api:app --host 0.0.0.0 --port 8000` (sin `--host` solo
+   acepta conexiones de la misma PC) y deja abierto el puerto 8000 en el firewall.
+2. En este proyecto crea un archivo `.env` con:
+
+   ```
+   VITE_API_URL=http://192.168.1.10:8000/graphql
+   ```
+
+3. Reinicia `npm run dev` (Vite lee el `.env` solo al arrancar).
 
 ## Cómo se usa
 
