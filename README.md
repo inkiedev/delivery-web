@@ -24,6 +24,9 @@ src/Ciudad3D.jsx  la ciudad 3D: calles, edificios, restaurantes, motos y pines
 
 ## Cómo correrlo
 
+Requisito: **Node 20.19 o más nuevo** (dentro de la serie 22, la 22.12 o más nueva), que es lo que
+pide Vite. Revisa tu versión con `node --version`.
+
 1. Levanta primero el backend (`delivery-distribuido`: RabbitMQ, `uvicorn api:app` y `python worker.py`).
 2. Después:
 
