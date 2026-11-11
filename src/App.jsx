@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { graphql } from "./api";
+import Ciudad3D from "./Ciudad3D";
 
 // Una sola consulta trae todo lo que la pantalla necesita.
 const CONSULTA = `{
@@ -65,8 +66,8 @@ export default function App() {
       <div className="container-fluid p-3">
         <div className="row g-3">
           <div className="col-lg-8">
-            <div className="card d-flex align-items-center justify-content-center text-muted" style={{ height: 520 }}>
-              Mapa 3D
+            <div className="card overflow-hidden" style={{ height: 520 }}>
+              <Ciudad3D datos={datos} destino={destino} onElegirDestino={setDestino} />
             </div>
           </div>
 
